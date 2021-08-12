@@ -12,15 +12,19 @@
 <body>
 
     <form action="index.html" class="login-form">
-    <h1>Proto ERP-Print</h1>
+        <img class="img-logo" src="./img/logo.png" alt="logo oxy">
+    <!-- <h1>Proto ERP-Print</h1> -->
     
     <div class="txtb">
         <select class="form-select" aria-label="Default select example">
-            <option selected>Sélection Status</option>
-            <option value="1">Opérateur de production</option>
-            <option value="2">BE - Dessinateur industriel</option>
-            <option value="3">Cadre / Responsable</option>
-            <option value="4">Developer Staff</option>
+            <option selected>Votre secteur</option>
+            <option value="1">Production</option>
+            <option value="2">Management de projet</option>
+            <option value="3">Ressources Humaines</option>
+            <option value="4">Comptabilité Finance</option>
+            <option value="5">Logistique Gestion des stocks</option>
+            <option value="6">Ventes CRM</option>
+            <option value="7">---Administrateur---</option>
           </select>
     </div>
 
@@ -34,22 +38,24 @@
         <span data-placeholder ="Mot de passe"></span>
     </div>
 
-    <input type="submit" class="logbtn" value="Login">
+    <input type="submit" class="logbtn" value="Se connecter">
 
     <div class="bottom-text">
-        Vous n'êtes pas encore inscrit ? <a href="#">S'inscrire</a>
+        Vous n'arrivez pas à vous connecter ? <a class="link-contact" href="#">Contactez</a><br> l'assistance technique.
     </div>
     </form>
 
     <script type="text/javascript">
-    $(".txtb input").on("focus", function(){
+    $(".txtb input").on("focus",function(){
         $(this).addClass("focus");
     });
 
-    $(".txtb input").on("blur", function(){
+    $(".txtb input").on("blur",function(){
         if($(this).val() == "")
-        $(this).addClass("focus");
+        $(this).removeClass("focus");
     });
+
     </script>
+
 </body>
 </html>
