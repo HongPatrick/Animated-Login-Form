@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation page login</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <form action="index.html" class="login-form">
+    <h1>Proto ERP-Print</h1>
+    
+    <div class="txtb">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Sélection Status</option>
+            <option value="1">Opérateur de production</option>
+            <option value="2">BE - Dessinateur industriel</option>
+            <option value="3">Cadre / Responsable</option>
+            <option value="4">Developer Staff</option>
+          </select>
+    </div>
+
+    <div class="txtb">
+        <input type="text">
+        <span data-placeholder ="Identifiant"></span>
+    </div>
+
+    <div class="txtb">
+        <input type="password">
+        <span data-placeholder ="Mot de passe"></span>
+    </div>
+
+    <input type="submit" class="logbtn" value="Login">
+
+    <div class="bottom-text">
+        Vous n'êtes pas encore inscrit ? <a href="#">S'inscrire</a>
+    </div>
+    </form>
+
+    <script type="text/javascript">
+    $(".txtb input").on("focus", function(){
+        $(this).addClass("focus");
+    });
+
+    $(".txtb input").on("blur", function(){
+        if($(this).val() == "")
+        $(this).addClass("focus");
+    });
+    </script>
+</body>
+</html>
